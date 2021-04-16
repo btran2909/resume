@@ -148,14 +148,11 @@
 				$(this).parents('.accordion-group').find('.accordion-content').stop().slideDown('fast');
 			});
 		});
-
+		$('#alertForm').hide();
 		$('#contactform').on('submit', function(e){
 			e.preventDefault();
-			if($('#your-name').val().trim().length > 0 && $('#id').val().trim().length > 0) {
-				$("#modalSuccess").modal();
-			} else {
-				$("#myAlert").alert();
-			}
+			$('#alertForm').show();
+			setTimeout(function(){ $('#alertForm').hide(); }, 3000);
 		});
 	});
 	

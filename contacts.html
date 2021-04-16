@@ -176,13 +176,12 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-7">
 				<h3 class="title-md">LET’S HAVE A FUN</h3>
-				<!-- <div class="alert alert-success alert-dismissible" id="alert-form">
-					<span class="close">&times;</span>
-					<strong>Success!</strong> This alert box could indicate a successful or positive action.
-				</div> -->
+				<div class="alert alert-success" role="alert" id="alertForm">
+					<strong>Success!</strong> Thanks for being awesome!
+				</div>
 				<form method="post" id="contactform">
-					<p><input type="text" placeholder="Your name *" name="name" id="your-name"></p>
-					<p><input type="email" placeholder="Your email *" name="email"></p>
+					<p><input type="text" placeholder="Your name *" name="name" id="your-name" required></p>
+					<p><input type="email" placeholder="Your email *" name="email" required></p>
 					<p><textarea placeholder="Your message" name="comment"></textarea></p>
 					<p><input type="submit" value="Send message"></p>
 				</form>
