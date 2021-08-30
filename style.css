@@ -2110,7 +2110,7 @@ address table td:first-child {
   line-height: 24px;
   font-family: 'Lato';
   font-weight: normal;
-  text-transform: uppercase;
+  text-transform: capitalize;
   display: block;
 }
 
@@ -2133,8 +2133,8 @@ address table td:first-child {
 }
 
 .portfolio-posts .folio-item .entry-item:hover .entry-hover {
-  top: 15px;
-  left: 15px;
+  top: 0;
+  left: 0;
   visibility: visible;
   opacity: 1;
 }
