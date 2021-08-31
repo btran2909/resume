@@ -33,7 +33,43 @@
 	<!-- Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	
+	<style>
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 10px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    .modal-content img{
+      width: 100%;
+    }
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
 
 </head>
 <body class="animsition">
@@ -207,7 +243,7 @@
 							</div>
 						</article>
 						<article class="folio-item col-md-4 col-sm-6 col-xs-12 website">
-							<div class="entry-item" data-bg-image="images/portfolio/grid_5.png">
+							<div class="entry-item" data-bg-image="images/portfolio/clare-ai.png">
 								<img src="images/3x4.png" class="img-block" alt="image block">
 								<div class="entry-hover">
 									<span class="inner-table">
@@ -216,19 +252,28 @@
 											<span class="category">Bot Chat for Facebook, WhatsApp,etc... .</span>
 											<span class="category">Language/Technologies: .Net MVC, .Net core, ReactJs, Sql Server, MongoDB, GitLab</span>
 											<span class="category">Position: Developer Fronted, Backend</span>
-											<a href="https://www.clare.ai" target="_blank" class="permalink at-link"><i class="fa fa-angle-right"></i></a>
+											<a href="https://www.clare.ai" target="_blank" class="permalink at-link"><i class="fa fa-angle-right"></i></a><br /><br />
+                      <button id="myBtn" class="btn btn-primary">Open Image</button>
 										</span>
 									</span>
 								</div>
 							</div>
 						</article>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>
+                  <img src="images/portfolio/clare-ai.png" alt="clare-ai">
+                </p>
+              </div>
+            </div>
 						<article class="folio-item col-md-4 col-sm-6 col-xs-12 website">
-							<div class="entry-item" data-bg-image="images/portfolio/grid_5.png">
+							<div class="entry-item" data-bg-image="images/portfolio/krarks.jpg">
 								<img src="images/3x4.png" class="img-block" alt="image block">
 								<div class="entry-hover">
 									<span class="inner-table">
 										<span class="inner-cell">
-											<h3>Krarks Website Application</h3>
+											<h3>Krark's Website Application</h3>
 											<span class="category">Design invitation cards, e-commerce business and online payment with PayPal</span>
 											<span class="category">Language/Technologies: NodeJs, Vue, Fabricjs, ReactJs, MongoDb, Trello, GibLab</span>
 											<span class="category">Position: Developer Frontend</span>
@@ -239,7 +284,7 @@
 							</div>
 						</article>
 						<article class="folio-item col-md-4 col-sm-6 col-xs-12 website">
-							<div class="entry-item" data-bg-image="images/portfolio/grid_5.png">
+							<div class="entry-item" data-bg-image="images/portfolio/ole.png">
 								<img src="images/3x4.png" class="img-block" alt="image block">
 								<div class="entry-hover">
 									<span class="inner-table">
@@ -248,7 +293,7 @@
 											<span class="category">Invoices, Credit Notes, Expenses, Bills, Recurring Invoices and more are available</span>
 											<span class="category">Language/Technologies: .Net core, Angular, ABP Framework, Sql Server, Azure</span>
 											<span class="category">Position: Leader</span>
-											<a href="https://hk-demo200.clare.ai/Account/LogIn" target="_blank" class="permalink at-link"><i class="fa fa-angle-right"></i></a>
+											<a href="#" target="_blank" class="permalink at-link"><i class="fa fa-angle-right"></i></a>
 										</span>
 									</span>
 								</div>
@@ -299,6 +344,21 @@
 <script type="text/javascript" src="vendors/jquery.waypoints.min.js"></script>
 <script type="text/javascript" src="vendors/isotope.pkgd.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
-
+<script>
+  var modal = document.getElementById("myModal");
+  var btn = document.getElementById("myBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
 </body>
 </html>
